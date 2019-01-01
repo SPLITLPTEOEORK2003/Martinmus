@@ -172,7 +172,7 @@ async function handleVideo(video, msg, voiceChannel, playlist = false) {
 			var connection = await voiceChannel.join();
 			queueConstruct.connection = connection;
 			play(msg.guild, queueConstruct.songs[0]);
-		} else (error) {
+		} catch (error) {
 			console.error(`I could not join the voice channel: ${error}`);
 			queue.delete(msg.guild.id);
 			return msg.channel.send(`لا أستطيع دخول هذآ الروم ${error}`);
