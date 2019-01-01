@@ -236,8 +236,6 @@ client.on("message", message => {
 });
 }
 
-});
-
 const adminprefix = ".";//by ,$ ReBeL ء , 🔕#4777 'CODES SERVER'
 const devs = ['350547695569600522'];//by ,$ ReBeL ء , 🔕#4777 'CODES SERVER'
 client.on('message', message => {//by ,$ ReBeL ء , 🔕#4777 'CODES SERVER'
