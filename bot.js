@@ -266,4 +266,4 @@ if (message.content.startsWith(adminprefix + 'sett')) {
 
 
    
-client.login(process.env.BOT_TOKEN);
+client.login(process.env.TOKEN);
