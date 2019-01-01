@@ -20,7 +20,7 @@ const gif = require("gif-search");
 
 const client = new Discord.Client({disableEveryone: true});
 
-const prefix = "^^";
+const prefix = ".";
 /////////////////////////
 ////////////////////////
 
@@ -342,5 +342,41 @@ client.on('message', message => {
     }
 });
 
-client.login(process.env.BOT_TOKEN);
+
+const prefix = ".";
+const developers = ["350547695569600522"]
+client.on('message', message => {
+    var argresult = message.content.split(` `).slice(1).join(' ');
+      if (!developers.includes(message.author.id)) return;
+      
+  if (message.content.startsWith(adminprefix + 'stply')) {
+    client.user.setGame(argresult);
+      message.channel.send(`✅`)
+  } else 
+     if (message.content === (adminprefix + "leave")) {
+    message.guild.leave();        
+  } else  
+  if (message.content.startsWith(adminprefix + 'stwt')) {
+  client.user.setActivity(argresult, {type:'WATCHING'});
+      message.channel.send(`✅`)
+  } else 
+  if (message.content.startsWith(adminprefix + 'ls')) {
+  client.user.setActivity(argresult , {type:'LISTENING'});
+      message.channel.send(`✅`)
+  } else 
+  if (message.content.startsWith(adminprefix + 'stst')) {
+    client.user.setGame(argresult, "https://www.twitch.tv/dream");
+      message.channel.send(`**✅**`)
+  }
+  if (message.content.startsWith(adminprefix + 'nem')) {
+  client.user.setUsername(argresult).then
+      message.channel.send(`✅`)
+} else
+if (message.content.startsWith(adminprefix + 'ava')) {
+  client.user.setAvatar(argresult);
+    message.channel.send(`✅`)
+}
+});
+
+client.login(process.env.TOKEN);
 
