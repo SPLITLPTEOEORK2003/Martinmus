@@ -233,7 +233,6 @@ client.on("message", message => {
 		if (!message.member.voiceChannel) return message.reply('**Sorry,youre not on a voice channel**');
 		message.member.voiceChannel.join().then(message.react('✅'));
 	}
-});
 }
 
 const adminprefix = ".";//by ,$ ReBeL ء , 🔕#4777 'CODES SERVER'
