@@ -229,11 +229,11 @@ ${prefix}queue ⇏ لمعرفة قآئمة التشغيل
 
 
 client.on("message", message => {
-	 if (message.content === `join`) {
-		if (!message.member.voiceChannel) return message.reply('**Sorry,youre not on a voice channel**');
-		message.member.voiceChannel.join().then(message.react('✅'));
-	}
-}
+     if (message.content === `join`) {
+        if (!message.member.voiceChannel) return message.reply('**Sorry,youre not on a voice channel**');
+        message.member.voiceChannel.join().then(message.react('✅'));
+    }
+});
 
 var adminperfix = ".";//by ,$ ReBeL ء , 🔕#4777 'CODES SERVER'
 const devs = ['350547695569600522'];//by ,$ ReBeL ء , 🔕#4777 'CODES SERVER'
